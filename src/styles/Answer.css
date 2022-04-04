@@ -1,0 +1,33 @@
+.answer {
+    min-height: fit-content;
+    height: 25px;
+    width: fit-content;
+
+    padding: 15px;
+    border: 0.8px solid #4D5B9E;
+    border-radius: 8px;
+
+    font-weight: 400;
+    font-size: 1rem;
+    color: #293264;
+
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.answer.selected {
+    background-color: #D6DBF5;
+}
+
+.answer.correct.checked {
+    background-color: #94D7A2;
+}
+
+.answer.incorrect.checked.selected {
+    background-color: #F8BCBC;
+}

@@ -1,38 +1,175 @@
 .App {
-  text-align: center;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Karla';
+    font-weight: 700;
+
+    background-color: #F5F7FB;
+
+    overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circle-one {
+    z-index: 1;
+    position: absolute;
+    top: -180px;
+    right: -200px;
+
+    width: 500px;
+    height: 550px;
+
+    background-color: #FFFAD1;
+    border-radius: 37%;
+
+    transform: rotate(-18deg);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.circle-one.start {
+    top: 30px;
+    right: 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.circle-two {
+    z-index: 1;
+    position: absolute;
+    bottom: -200px;
+    left: -245px;
+
+    width: 480px;
+    height: 480px;
+
+    background-color: #DEEBF8;
+    border-radius: 32%;
+
+    transform: rotate(-8deg);
 }
 
-.App-link {
-  color: #61dafb;
+.circle-two.start {
+    bottom: -150px;
+    left: -145px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-container {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+
+    font-size: 3rem;
+    line-height: 3.1rem;
+
+    color: #293264;
+}
+
+h2 {
+    margin-bottom: 70px;
+
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.1rem;
+
+    color: #293264;
+}
+
+.start-button {
+    width: 250px;
+    height: 70px;
+
+    background: #4D5B9E;
+    border: none;
+    border-radius: 15px;
+
+    cursor: pointer;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+
+    color: #F5F7FB;
+}
+
+.start-button:active {
+    box-shadow: inset 5px 5px 5px -3px rgba(0, 0, 0, 0.7), inset -5px -5px 10px -8px rgba(0, 0, 0, 0.7), 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.questions-container {
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.questions {
+    width: 70%;
+    height: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.score-container {
+    margin-top: 30px;
+    gap: 30px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #293264;
+}
+
+.check-answers-button {
+    height: 30px;
+    width: 200px;
+
+    padding: 30px;
+
+    background: #4D5B9E;
+    border-radius: 10px;
+
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    color: #F5F7FB;
+
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.check-answers-button.pending {
+    background-color: gray;
+    cursor: default;
+}
+
+.check-answers-button:not(.pending):active {
+    box-shadow: inset 5px 5px 5px -3px rgba(0, 0, 0, 0.7), inset -5px -5px 10px -8px rgba(0, 0, 0, 0.7), 0px 2px 2px rgba(0, 0, 0, 0.15);
 }
